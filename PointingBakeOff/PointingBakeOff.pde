@@ -67,7 +67,7 @@ void draw()
     ellipse(userX, userY, 20, 20); //draw user cursor as a circle with a diameter of 20
     
     //adds a line from the circle to the target square
-    stroke(255,0,0,200);
+    stroke(255,0,0 , 200);
     strokeWeight(2);
     line(userX,userY, bounds.x + (bounds.width/2), bounds.y + (bounds.height/2));
     
@@ -181,8 +181,8 @@ void drawButton(int i)
     { 
       //This would add a border to the box
       //stroke(0, 0, 255);
-      //stroke(0xFF, 0xF7, 0x73); //yellow stroke
-      //strokeWeight(4);
+      stroke(0xFF, 0xF7, 0x73); //yellow stroke
+      strokeWeight(4);
       rect(bounds.x, bounds.y, bounds.width, bounds.height);
       noStroke();
     }
