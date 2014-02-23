@@ -51,13 +51,31 @@ void draw()
   
   if ((userX > bounds.x && userX < bounds.x + bounds.width) && (userY > bounds.y && userY < bounds.y + bounds.height)) // test to see if the user is within bounds
   {
+<<<<<<< HEAD
     fill(229, 97, 5); // set fill color to orange
     ellipse(userX, userY, 30, 30); //draw user cursor as a circle with a diameter of 20 
+=======
+    //Changes the color of the rectangle when the user is over it 
+    fill(0x36, 0xDA, 0x82);
+    rect(bounds.x, bounds.y, bounds.width, bounds.height);
+    
+    // The commented out line below changes the ellipse to black and transparent 
+    //fill(0, 145); 
+    fill(255,0,0); 
+    // increases the size of the ellipse
+    ellipse(userX, userY, 23, 23); //draw user cursor as a circle with a diameter of 20 
+>>>>>>> 52c00550219975663d8142d727c5676f3bf7c098
   } 
   else
   {
     fill(0, 255,255); // set fill color to cyan
     ellipse(userX, userY, 20, 20); //draw user cursor as a circle with a diameter of 20
+    
+    //adds a line from the circle to the target square
+    stroke(255,0,0 , 200);
+    strokeWeight(2);
+    line(userX,userY, bounds.x + (bounds.width/2), bounds.y + (bounds.height/2));
+    
   }
   
 }
@@ -158,13 +176,17 @@ void drawButton(int i)
   Rectangle bounds = getButtonLocation(i);
 
   if ((Integer)trials.get(trialNum) == i) // see if current button is the target
-    fill(0, 255, 255); // if so, fill cyan
+  // Changes the color of rectangle 
+  //fill(0, 255, 255); // if so, fill cyan
+    fill(0xFF, 0xFF, 0); //yellow
   else
     fill(200); // if not, fill gray
 
   if ((Integer)trials.get(trialNum) == i) // see if current button is the target
-    {
-      stroke(0, 0, 255);
+    { 
+      //This would add a border to the box
+      //stroke(0, 0, 255);
+      stroke(0xFF, 0xF7, 0x73); //yellow stroke
       strokeWeight(4);
       rect(bounds.x, bounds.y, bounds.width, bounds.height);
       noStroke();
