@@ -51,10 +51,9 @@ void draw()
   
   if ((userX > bounds.x && userX < bounds.x + bounds.width) && (userY > bounds.y && userY < bounds.y + bounds.height)) // test to see if the user is within bounds
   {
-<<<<<<< HEAD
-    fill(229, 97, 5); // set fill color to orange
-    ellipse(userX, userY, 30, 30); //draw user cursor as a circle with a diameter of 20 
-=======
+    //fill(229, 97, 5); // set fill color to orange
+    //ellipse(userX, userY, 30, 30); //draw user cursor as a circle with a diameter of 20 
+
     //Changes the color of the rectangle when the user is over it 
     fill(0x36, 0xDA, 0x82);
     rect(bounds.x, bounds.y, bounds.width, bounds.height);
@@ -64,7 +63,7 @@ void draw()
     fill(255,0,0); 
     // increases the size of the ellipse
     ellipse(userX, userY, 23, 23); //draw user cursor as a circle with a diameter of 20 
->>>>>>> 52c00550219975663d8142d727c5676f3bf7c098
+
   } 
   else
   {
