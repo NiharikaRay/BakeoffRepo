@@ -51,23 +51,26 @@ void draw()
   
   if ((userX > bounds.x && userX < bounds.x + bounds.width) && (userY > bounds.y && userY < bounds.y + bounds.height)) // test to see if the user is within bounds
   {
-    //fill(229, 97, 5); // set fill color to orange
-    //ellipse(userX, userY, 30, 30); //draw user cursor as a circle with a diameter of 20 
-
+    
     //Changes the color of the rectangle when the user is over it 
     fill(0x36, 0xDA, 0x82);
     rect(bounds.x, bounds.y, bounds.width, bounds.height);
     
+    //fill(229, 97, 5); // set fill color to orange
+    //ellipse(userX, userY, 30, 30); //draw user cursor as a circle with a diameter of 20 
+
     // The commented out line below changes the ellipse to black and transparent 
     //fill(0, 145); 
+    
     fill(255,0,0); 
-    // increases the size of the ellipse
-    ellipse(userX, userY, 23, 23); //draw user cursor as a circle with a diameter of 20 
+    // increases the size of the ellipse if the last two numbers are 23, else it's the same
+    ellipse(userX, userY, 20, 20); //draw user cursor as a circle with a diameter of 20 
 
   } 
   else
   {
-    fill(0, 255,255); // set fill color to cyan
+    fill(255,0,0);
+    //fill(0, 255,255); // set fill color to cyan
     ellipse(userX, userY, 20, 20); //draw user cursor as a circle with a diameter of 20
     
     //adds a line from the circle to the target square
